@@ -9,8 +9,8 @@ int main(int argc , char* argv[]){
 
     //Creating our player 
     sf::RectangleShape player({120.0f, 120.0f});
-    player.setFillColor(sf::Color::Red);
-    player.setOrigin({60.0f, 60.0f});
+    player.setFillColor(sf::Color::Red); // This function will set Color red to our player
+    player.setOrigin({player.getSize().x / 2, player.getSize().y / 2}); // x,y are on the center of our player entity
     sf::Vector2<float>player_position({400.0f, 400.0f});
     player.setPosition(player_position);
 
@@ -22,7 +22,7 @@ int main(int argc , char* argv[]){
         }
 
         // window.clear(sf::Color::Yellow);
-        window.clear(sf::Color(200,150,200,200));
+        window.clear(sf::Color(0,0,0,0));
         window.draw(player);
         window.display();
     }
